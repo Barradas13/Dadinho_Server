@@ -35,3 +35,8 @@ def duvidar(sala_id: str, jogador_id: int):
 @app.get("/sala/{sala_id}")
 def estado_sala(sala_id: str):
     return rooms_manager.estado_sala(sala_id)
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
